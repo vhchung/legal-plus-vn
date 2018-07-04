@@ -27,10 +27,10 @@
 
 			map = new GMaps({
 				el: '#map-wrapper',
-				lat: 45.494447,
-				lng: -73.5697587,
+				lat: 20.999663,
+				lng: 105.823364,
 				scrollwheel:false,
-				zoom: 16,
+				zoom: 17,
 				zoomControl : true,
 				panControl : true,
 				streetViewControl : true,
@@ -41,61 +41,14 @@
 
 			var image = '';
 			map.addMarker({
-				lat: 45.494447,
-				lng: -73.5697587,
+				lat: 20.999663,
+				lng: 105.823364,
 				icon: image,
 				animation: google.maps.Animation.DROP,
 				verticalAlign: 'bottom',
 				horizontalAlign: 'center',
 				backgroundColor: '#d3cfcf',
 			});
-
-
-			var styles = [ 
-
-			{
-				"featureType": "road",
-				"stylers": [
-				{ "color": "#ffffff" }
-				]
-			},{
-				"featureType": "water",
-				"stylers": [
-				{ "color": "#99b3cc" }
-				]
-			},{
-				"featureType": "landscape",
-				"stylers": [
-				{ "color": "#f2efe9" }
-				]
-			},{
-				"elementType": "labels.text.fill",
-				"stylers": [
-				{ "color": "#d3cfcf" }
-				]
-			},{
-				"featureType": "poi",
-				"stylers": [
-				{ "color": "#ded2ac" }
-				]
-			},{
-				"elementType": "labels.text",
-				"stylers": [
-				{ "saturation": 1 },
-				{ "weight": 0.1 },
-				{ "color": "#000000" }
-				]
-			}
-
-			];
-
-			map.addStyle({
-				styledMapName:"Styled Map",
-				styles: styles,
-				mapTypeId: "map_style"  
-			});
-
-			map.setStyle("map_style");
 		}());
 
 
@@ -250,7 +203,6 @@ var message =$('#message').val();
 	// -------------------------------------------------------------
 		$('.slider').bxSlider({ auto:true,touchEnabled:false, controls:false, 
 		onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
-		    console.log(currentSlideHtmlObject);
 		    $('.active-slide').removeClass('active-slide');
 		    $('.slider>.item').eq(currentSlideHtmlObject + 1).addClass('active-slide')
 		},
